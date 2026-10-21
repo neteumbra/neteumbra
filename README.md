@@ -2,22 +2,50 @@
 
 **Java Backend Developer | Linux & SecOps**
 
-<img width="955" height="321" alt="image" src="https://github.com/user-attachments/assets/d1151022-46ef-452e-924e-6cb235c72463" />
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+  <img src="https://img.shields.io/badge/Spring_Boot-007396?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Linux-1F2937?style=for-the-badge&logo=linux&logoColor=white" alt="Linux">
+  <img src="https://img.shields.io/badge/SecOps-1F2937?style=for-the-badge&logo=shield&logoColor=white" alt="SecOps">
+</p>
 
-Desarrollador Backend centrado en Java y Spring Boot, con bases en administración de servidores Linux y ciberseguridad aplicada (SecOps). Construyo APIs REST con PostgreSQL y autenticación JWT, en mis tiempos libres me gusta aportar a proyectos Open Source y hacer encargos freelance.
+<p align="center">
+  <img width="955" alt="Banner" src="https://github.com/user-attachments/assets/d1151022-46ef-452e-924e-6cb235c72463" />
+</p>
 
-Cuento con experiencia en desarrollo web fullstack y actualmente me encuentro complementando mi perfil con la inclusión de TypeScript en la construcción de interfaces modernas e integraciones completas.
+Backend developer focused on Java and Spring Boot, with a background in Linux server administration and applied cybersecurity (SecOps). I build REST APIs with PostgreSQL and JWT authentication, and in my free time I contribute to Open Source projects and take on freelance work.
 
-### Proyecto Destacado
-**Golaya — Sistema de Gestión de Reservas** *(Proyecto Colaborativo)* 
-- API REST en Spring Boot con JWT y roles, PostgreSQL, Docker (Render) + frontend completo.
-- [Frontend](https://github.com/CamiloBermeo/devPortes) · [Backend](https://github.com/CamiloBermeo/DevPortes-Backend)
+I have hands-on fullstack web development experience, and I am currently rounding out my profile with TypeScript for modern interfaces and complete integrations.
 
 ---
 
-## Competencias Técnicas
+## Featured Projects
+
+<div align="center">
+
+| Project | Stack | Description |
+| :--- | :---: | :--- |
+| [**Golaya**](https://github.com/CamiloBermeo/devPortes) | Spring Boot · PostgreSQL · Docker | Booking management system — collaborative project *(org hertex)*. REST API with JWT + roles and a full frontend. [Frontend](https://github.com/CamiloBermeo/devPortes) · [Backend](https://github.com/CamiloBermeo/DevPortes-Backend) |
+| [**cv-web**](https://github.com/neteumbra/cv-web) | Astro · CodeMirror 6 · TypeScript | CV editor with i18n (ES/EN) — my flagship personal project. |
+| [**nenvim**](https://github.com/NeTenebrae-Sec/nenvim) | Lua · Neovim | Personal Neovim configuration. |
+| [**neCyberWiki**](https://github.com/NeTenebrae-Sec/neCyberWiki) | TypeScript | Cybersecurity and computer science wiki. |
+
+</div>
+
+### In progress
+
+<p align="center">
+  <img src="https://img.shields.io/badge/SMT-%E2%9C%A8%20In%20Progress%20%E2%9C%A8-007396?style=for-the-badge" alt="SMT In Progress">
+</p>
+
+**SMT** *(Shin Megami Tensei)* — a demon compendium, fullstack **NextJS + Spring Boot**, in English. Coming soon.
+
+---
+
+## Technical Skills
 
 * **Backend:** Java, Spring Boot, Spring Security (JWT), RESTful APIs, JUnit
-* **Frontend & Web:** JavaScript, HTML5, CSS3.
-* **Sistemas & SecOps:** Linux Server Administration, Bash Scripting, Web Security, Hardening.
-* **Herramientas:** Git, Docker, SQL.
+* **Frontend & Web:** JavaScript, TypeScript, HTML5, CSS3, Astro
+* **Systems & SecOps:** Linux Server Administration, Bash Scripting, Web Security, Hardening
+* **Tools:** Git, Docker, SQL, PostgreSQL
