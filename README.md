@@ -26,7 +26,7 @@ I have hands-on fullstack web development experience, and I am currently roundin
 
 | Project | Stack | Description |
 | :--- | :---: | :--- |
-| [**Golaya**](https://github.com/CamiloBermeo/devPortes) | Spring Boot · PostgreSQL · Docker | Booking management system — collaborative project *(org hertex)*. REST API with JWT + roles and a full frontend. [Frontend](https://github.com/CamiloBermeo/devPortes) · [Backend](https://github.com/CamiloBermeo/DevPortes-Backend) |
+| [**Golaya**](https://github.com/HertexCode/devPortes) | Spring Boot · PostgreSQL · Docker | Booking management system — collaborative project *(org hertex, with [CamiloBermeo](https://github.com/CamiloBermeo))* . REST API with JWT + roles and a full frontend. [Frontend](https://github.com/HertexCode/devPortes) · [Backend](https://github.com/HertexCode/DevPortes-Backend) |
 | [**cv-web**](https://github.com/neteumbra/cv-web) | Astro · CodeMirror 6 · TypeScript | CV editor with i18n (ES/EN) — my flagship personal project. |
 | [**nenvim**](https://github.com/NeTenebrae-Sec/nenvim) | Lua · Neovim | Personal Neovim configuration. |
 | [**neCyberWiki**](https://github.com/NeTenebrae-Sec/neCyberWiki) | TypeScript | Cybersecurity and computer science wiki. |
