@@ -14,7 +14,9 @@
 
 <img width="955" height="321" alt="image" src="https://github.com/user-attachments/assets/d1151022-46ef-452e-924e-6cb235c72463" />
 
-I own the entire development lifecycle—prototyping, coding, and deploying secure infrastructure. With Linux and defensive security as my baseline, I build modern web stacks using Astro and TypeScript on the frontend, backed by Spring Boot and PostgreSQL. Off the clock, I focus on open-source contributions and vulnerability research in bug bounty programs.
+I own the entire development lifecycle. Prototyping, coding, and deploying secure infrastructure. 
+
+With Linux and defensive security as my baseline, I build modern web stacks using Astro and TypeScript on the frontend, backed by Spring Boot and PostgreSQL. Off the clock, I focus on open-source contributions and vulnerability research in bug bounty programs.
 
 ## Featured Projects
 
@@ -22,7 +24,7 @@ I own the entire development lifecycle—prototyping, coding, and deploying secu
 
 | Project | Stack | Description |
 | :--- | :---: | :--- |
-| [**Golaya**](https://github.com/HertexCode/devPortes) | Spring Boot · PostgreSQL · Docker | Booking management system — collaborative project *(org hertex, with [CamiloBermeo](https://github.com/CamiloBermeo))* . REST API with JWT + roles and a full frontend. [Frontend](https://github.com/HertexCode/devPortes) · [Backend](https://github.com/HertexCode/DevPortes-Backend) |
+| [**Golaya**](https://github.com/HertexCode/devPortes) | Spring Boot · PostgreSQL · Docker | Booking management system — collaborative project *(with [CamiloBermeo](https://github.com/CamiloBermeo))* . REST API with JWT + roles and a full frontend. [Frontend](https://github.com/HertexCode/devPortes) · [Backend](https://github.com/HertexCode/DevPortes-Backend) |
 | [**cv-web**](https://github.com/neteumbra/cv-web) | Astro · CodeMirror 6 · TypeScript | CV editor with i18n (ES/EN) |
 | [**nenvim**](https://github.com/NeTenebrae-Sec/nenvim) | Lua · Neovim | Personal Neovim configuration. |
 | [**neCyberWiki**](https://github.com/NeTenebrae-Sec/neCyberWiki) | TypeScript | Cybersecurity and computer science wiki. |
