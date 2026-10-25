@@ -12,7 +12,8 @@
   <img src="https://img.shields.io/badge/SecOps-1F2937?style=for-the-badge&logo=shield&logoColor=white" alt="SecOps">
 </p>
 
-<img width="955" height="321" alt="image" src="https://github.com/user-attachments/assets/d1151022-46ef-452e-924e-6cb235c72463" />
+<img width="1024" height="338" alt="image" src="https://github.com/user-attachments/assets/d80529de-8c8d-49e2-b51b-7c0ab378ddc5" />
+
 
 I own the entire development lifecycle. Prototyping, coding, and deploying secure infrastructure. 
 
