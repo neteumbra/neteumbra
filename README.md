@@ -14,9 +14,7 @@
 
 <img width="955" height="321" alt="image" src="https://github.com/user-attachments/assets/d1151022-46ef-452e-924e-6cb235c72463" />
 
-I like working end to end: prototype, code, deploy, harden.
-
-Full-stack developer with a Linux and cybersecurity background: Astro and TypeScript on the front, Spring Boot with PostgreSQL and JWT on the back, deployed on Vercel and Render. In my spare time I contribute to open source and take on freelance work.
+I own the entire development lifecycle—prototyping, coding, and deploying secure infrastructure. With Linux and defensive security as my baseline, I build modern web stacks using Astro and TypeScript on the frontend, backed by Spring Boot and PostgreSQL. Off the clock, I focus on open-source contributions and vulnerability research in bug bounty programs.
 
 ## Featured Projects
 
