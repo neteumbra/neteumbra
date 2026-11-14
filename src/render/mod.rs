@@ -376,7 +376,8 @@ mod tests {
             .iter()
             .find(|f| f.path == "assets/stage/hero.svg")
             .unwrap();
-        assert!(hero.content.contains("SYNC LIVE"));
+        assert!(hero.content.contains("MAURICIO"));
+        assert!(hero.content.contains("AVAILABLE FOR NEW PROJECTS"));
         let ticker = out
             .files
             .iter()

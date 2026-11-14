@@ -135,13 +135,6 @@ text{{font-family:{MONO};}}
 @keyframes slam{{from{{opacity:0;transform:translateX(-26px)}}to{{opacity:1;transform:none}}}}
 .mq{{animation:mq var(--mq-dur) linear infinite}}
 @keyframes mq{{to{{transform:translateX(var(--mq-shift))}}}}
-.scan{{animation:scan 7s linear infinite}}
-@keyframes scan{{from{{transform:translateY(-150px)}}to{{transform:translateY(520px)}}}}
-.gA{{animation:gA 9s steps(1,end) infinite}}
-.gB{{animation:gB 9s steps(1,end) infinite;animation-delay:4.6s}}
-@keyframes gA{{0%,88%,100%{{opacity:0;transform:translate(0,0)}}89%{{opacity:.55;transform:translate(-3px,1px)}}92%{{opacity:.3;transform:translate(3px,-1px)}}95%{{opacity:.45;transform:translate(-2px,0)}}}}
-@keyframes gB{{0%,90%,100%{{opacity:0;transform:translate(0,0)}}91%{{opacity:.4;transform:translate(3px,1px)}}94%{{opacity:.25;transform:translate(-3px,-1px)}}97%{{opacity:.4;transform:translate(2px,0)}}}}
-@keyframes type1{{from{{width:0}}to{{width:var(--w1)}}}}
 @media (prefers-reduced-motion:reduce){{*{{animation:none!important;transition:none!important}}}}
 "#
     )
@@ -166,29 +159,6 @@ pub fn doc(w: f64, h: f64, title: &str, body: &str, css: &str, defs: &str, round
     )
 }
 
-/// Background shared by the hero: phosphor bloom, quiet grid and scanlines.
-pub fn dark_defs() -> String {
-    r##"
-<radialGradient id="glow" cx="78%" cy="-6%" r="82%">
-  <stop offset="0" stop-color="#7df29a" stop-opacity=".17"/>
-  <stop offset=".5" stop-color="#7df29a" stop-opacity=".04"/>
-  <stop offset="1" stop-color="#7df29a" stop-opacity="0"/>
-</radialGradient>
-<linearGradient id="scanband" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0" stop-color="#7df29a" stop-opacity="0"/>
-  <stop offset=".5" stop-color="#7df29a" stop-opacity=".055"/>
-  <stop offset="1" stop-color="#7df29a" stop-opacity="0"/>
-</linearGradient>
-<pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
-  <path d="M36 0H0V36" fill="none" stroke="#f2f6f1" stroke-opacity=".05" stroke-width="1"/>
-</pattern>
-<pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-  <rect width="4" height="1" fill="#f2f6f1" fill-opacity=".025"/>
-</pattern>
-"##
-    .to_string()
-}
-
 pub fn corner_brackets(w: f64, h: f64, inset: f64, len: f64) -> String {
     let x0 = inset;
     let y0 = inset;
@@ -204,27 +174,6 @@ pub fn corner_brackets(w: f64, h: f64, inset: f64, len: f64) -> String {
         x1a = x1 - len,
         y1a = y1 - len,
     )
-}
-
-/// Small bracketed label: `[ JAVA ]`.
-pub fn chip(x: f64, y: f64, w: f64, h: f64, label: &str, filled: bool) -> String {
-    let (bg, fg, border, opacity) = if filled {
-        (ACCENT, INK_DARK, ACCENT, "1")
-    } else {
-        ("none", MUTED, LINE_STRONG, "1")
-    };
-    let fs = 10.0;
-    let ty = y + h / 2.0 + fs * 0.36;
-    format!(
-        r#"<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" fill="{bg}" fill-opacity="{opacity}" stroke="{border}"/><text x="{tx}" y="{ty:.1}" font-size="{fs}" fill="{fg}" letter-spacing="1.4" text-anchor="middle">{label}</text>"#,
-        tx = x + w / 2.0,
-        label = esc(label)
-    )
-}
-
-/// Width a chip needs for its label.
-pub fn chip_width(label: &str, pad: f64) -> f64 {
-    (text_width(&label.to_uppercase(), 10.0, 1.4) + pad).max(58.0)
 }
 
 #[cfg(test)]

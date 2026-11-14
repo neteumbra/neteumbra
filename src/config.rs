@@ -21,8 +21,6 @@ pub struct Config {
     pub tagline: String,
     #[serde(default = "default_kicker")]
     pub kicker: String,
-    #[serde(default = "default_location")]
-    pub location: String,
     pub status: String,
     pub about: String,
     #[serde(default)]
@@ -80,10 +78,6 @@ pub struct ContactCfg {
 
 fn default_kicker() -> String {
     "PROFILE // 001".into()
-}
-
-fn default_location() -> String {
-    "REMOTE".into()
 }
 
 fn default_window() -> u32 {

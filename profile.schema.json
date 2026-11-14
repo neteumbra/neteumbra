@@ -18,7 +18,6 @@
     },
     "tagline": { "type": "string" },
     "kicker": { "type": "string" },
-    "location": { "type": "string" },
     "status": { "type": "string" },
     "about": { "type": "string" },
     "stack": { "type": "array", "items": { "type": "string" } },
