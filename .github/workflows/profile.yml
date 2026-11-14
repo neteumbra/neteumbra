@@ -1,57 +1,56 @@
 name: Refresh profile
 
 on:
-  schedule:
-    # Every Monday at 04:00 UTC. The README is generated, so this is the only
-    # thing that keeps the numbers alive.
-    - cron: "0 4 * * 1"
-  workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - profile.config.json
-      - profile.schema.json
-      - Cargo.toml
-      - Cargo.lock
-      - src/**
-      - .github/workflows/profile.yml
+    schedule:
+        # Every Monday at 04:00 UTC. The README is generated, so this is the only
+        # thing that keeps the numbers alive.
+        - cron: '0 4 * * 1'
+    workflow_dispatch:
+    push:
+        branches: [main]
+        paths:
+            - profile.config.json
+            - profile.schema.json
+            - Cargo.toml
+            - Cargo.lock
+            - src/**
+            - .github/workflows/profile.yml
 
 permissions:
-  contents: write
+    contents: write
 
 concurrency:
-  group: refresh-profile
-  cancel-in-progress: true
+    group: refresh-profile
+    cancel-in-progress: true
 
 jobs:
-  refresh:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    refresh:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
 
-      - uses: dtolnay/rust-toolchain@stable
+            - uses: dtolnay/rust-toolchain@stable
 
-      - uses: Swatinem/rust-cache@v2
+            - uses: Swatinem/rust-cache@v2
 
-      - name: Test the generator
-        run: cargo test --locked
+            - name: Test the generator
+              run: cargo test --locked
 
-      - name: Refresh data and rebuild the stage
-        env:
-          # Optional read-only PAT (repo + read:user) for private-inclusive
-          # commit counts. Falls back to the workflow token.
-          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: cargo run --release --locked -- all
+            - name: Refresh data and rebuild the stage
+              env:
+                  # Optional read-only PAT (repo + read:user) for private-inclusive
+                  STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: cargo run --release --locked -- all
 
-      - name: Commit if anything changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A assets/profile.json assets/stage README.md preview.html
-          if git diff --cached --quiet; then
-            echo "No changes."
-          else
-            git commit -m "chore: refresh profile [skip ci]"
-            git push
-          fi
+            - name: Commit if anything changed
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  git add -A assets/profile.json assets/stage README.md preview.html
+                  if git diff --cached --quiet; then
+                    echo "No changes."
+                  else
+                    git commit -m "chore: refresh profile [skip ci]"
+                    git push
+                  fi

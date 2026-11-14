@@ -32,7 +32,7 @@
 <p align="center">
 <img src="assets/stage/h-contact.svg" width="100%" alt="Contact" /><br>
 <a href="https://github.com/neteumbra"><img src="assets/stage/contact-github.svg" height="44" alt="GITHUB ↗" /></a>
-<a href="https://www.linkedin.com/in/mauricio-pena"><img src="assets/stage/contact-linkedin.svg" height="44" alt="LINKEDIN ↗" /></a>
+<a href="https://www.linkedin.com/in/me-dev-fullstack/"><img src="assets/stage/contact-linkedin.svg" height="44" alt="LINKEDIN ↗" /></a>
 <a href="https://www.youtube.com/@NeTenebrae"><img src="assets/stage/contact-youtube.svg" height="44" alt="YOUTUBE ↗" /></a>
 <a href="https://neteumbra.github.io"><img src="assets/stage/contact-portfolio.svg" height="44" alt="PORTFOLIO ↗" /></a>
 <a href="https://neteumbra.github.io/contacto"><img src="assets/stage/contact-contact.svg" height="44" alt="CONTACT ↗" /></a>
@@ -63,7 +63,7 @@ I build websites, APIs and tools with one rule: security is designed in from day
 
 **Contact**
 
-[GITHUB](https://github.com/neteumbra) · [LINKEDIN](https://www.linkedin.com/in/mauricio-pena) · [YOUTUBE](https://www.youtube.com/@NeTenebrae) · [PORTFOLIO](https://neteumbra.github.io) · [CONTACT](https://neteumbra.github.io/contacto)
+[GITHUB](https://github.com/neteumbra) · [LINKEDIN](https://www.linkedin.com/in/me-dev-fullstack/) · [YOUTUBE](https://www.youtube.com/@NeTenebrae) · [PORTFOLIO](https://neteumbra.github.io) · [CONTACT](https://neteumbra.github.io/contacto)
 
 </details>
 
