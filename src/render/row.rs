@@ -12,7 +12,6 @@ const DESC_LINES: usize = 2;
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Action {
     Repo,
-    Live,
     Open,
     None,
 }
@@ -35,7 +34,6 @@ impl<'a> Row<'a> {
         }
         match self.action {
             Action::Repo => ("REPO ↗", MUTED),
-            Action::Live => ("LIVE ↗", ACCENT),
             Action::Open => ("OPEN ↗", ACCENT),
             Action::None => ("", MUTED),
         }
@@ -129,23 +127,6 @@ pub fn render(row: &Row<'_>, idx: usize, total: usize) -> String {
     doc(W, h, &title, &body, &css, "", None)
 }
 
-/// Small green chip for the live-demo strip under the project rows.
-pub fn live_chip(label: &str) -> (f64, String) {
-    let text = format!("▶ LIVE · {label}");
-    let w = (text_width(&text, 10.0, 0.8) + 30.0).max(120.0);
-    let h = 32.0;
-    let mut body = String::new();
-    body.push_str(&format!(
-        r#"<rect x=".5" y=".5" width="{w2}" height="{h2}" rx="6" fill="{ACCENT}" fill-opacity=".08" stroke="{ACCENT}" stroke-opacity=".5"/><text x="{cx}" y="21" font-size="10" fill="{ACCENT}" letter-spacing=".8" text-anchor="middle">{text}</text>"#,
-        w2 = w - 1.0,
-        h2 = h - 1.0,
-        cx = w / 2.0,
-        text = esc(&text)
-    ));
-    let alt = format!("Live demo: {label}");
-    (w, doc(w, h, &alt, &body, "", "", None))
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -194,13 +175,5 @@ mod tests {
         assert!(first.contains("linear 0.00s infinite"));
         assert!(second.contains("linear 1.60s infinite"));
         assert!(first.contains("6.40s"));
-    }
-
-    #[test]
-    fn live_chip_has_a_label_and_linkable_alt() {
-        let (w, svg) = live_chip("neCyberWiki");
-        assert!(w >= 120.0);
-        assert!(svg.contains("▶ LIVE · neCyberWiki"));
-        assert!(svg.contains("Live demo: neCyberWiki"));
     }
 }

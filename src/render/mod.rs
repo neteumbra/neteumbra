@@ -29,7 +29,6 @@ pub struct Images {
     pub about: Image,
     pub target_header: Image,
     pub targets: Vec<Image>,
-    pub demos: Vec<Image>,
     pub signal_header: Option<Image>,
     pub signals: Vec<Image>,
     pub contact_header: Image,
@@ -39,16 +38,14 @@ pub struct Images {
 
 impl Images {
     pub fn all(&self) -> Vec<&Image> {
-        let mut out = vec![&self.hero, &self.about, &self.target_header];
+        let mut out = vec![&self.hero, &self.ticker, &self.about, &self.target_header];
         out.extend(self.targets.iter());
-        out.extend(self.demos.iter());
         if let Some(header) = &self.signal_header {
             out.push(header);
         }
         out.extend(self.signals.iter());
         out.push(&self.contact_header);
         out.extend(self.contacts.iter());
-        out.push(&self.ticker);
         out
     }
 }
@@ -80,7 +77,7 @@ pub fn build(cfg: &Config, cache: &Cache) -> Output {
         ),
         about: image(
             "assets/stage/about.svg",
-            cfg.about.clone(),
+            about::alt(cfg),
             None,
             None,
             &mut files,
@@ -92,7 +89,10 @@ pub fn build(cfg: &Config, cache: &Cache) -> Output {
             None,
             None,
             &mut files,
-            section::render("Select target", &format!("[ {:02} PROJECTS ]", projects.len())),
+            section::render(
+                "Select target",
+                &format!("[ {:02} PROJECTS ]", projects.len()),
+            ),
         ),
         ..Default::default()
     };
@@ -137,22 +137,6 @@ pub fn build(cfg: &Config, cache: &Cache) -> Output {
         ));
     }
 
-    let mut demo_index = 0usize;
-    for project in &projects {
-        let Some(live) = &project.live_url else { continue };
-        let (_, svg) = row::live_chip(&project.label);
-        let file = format!("assets/stage/demo-{demo_index}.svg");
-        demo_index += 1;
-        images.demos.push(image(
-            &file,
-            format!("Live demo: {}", project.label),
-            Some(live.clone()),
-            Some(32.0),
-            &mut files,
-            svg,
-        ));
-    }
-
     if !signals.is_empty() {
         images.signal_header = Some(image(
             "assets/stage/h-signal.svg",
@@ -184,7 +168,7 @@ pub fn build(cfg: &Config, cache: &Cache) -> Output {
             let file = format!("assets/stage/signal-{i}.svg");
             images.signals.push(image(
                 &file,
-                format!("{} — {}", signal.title, description),
+                format!("{} — {}", signal.label, description),
                 signal.url.clone(),
                 None,
                 &mut files,
@@ -224,9 +208,7 @@ pub fn build(cfg: &Config, cache: &Cache) -> Output {
     );
 
     let readme = readme::render(&readme::Inputs {
-        cfg,
         cache,
-        projects: &projects,
         images: &images,
     });
     files.push(File {
@@ -318,7 +300,6 @@ mod tests {
             "assets/stage/about.svg",
             "assets/stage/h-targets.svg",
             "assets/stage/target-0.svg",
-            "assets/stage/demo-0.svg",
             "assets/stage/h-signal.svg",
             "assets/stage/signal-0.svg",
             "assets/stage/h-contact.svg",
@@ -350,8 +331,12 @@ mod tests {
         assert!(!readme.contains("img.shields.io"));
         assert!(!readme.contains("user-attachments"));
         assert!(!readme.contains("<script"));
-        assert!(readme.contains("Plain text version"));
-        assert!(readme.contains("How this README is built"));
+        assert!(!readme.contains("Plain text version"));
+        assert!(!readme.contains("How this README is built"));
+        assert!(!readme.contains("Generated with Rust"));
+        assert!(!readme.contains("<details>"));
+        assert!(!readme.contains("Live demo:"));
+        assert!(!readme.contains("demo-"));
     }
 
     #[test]

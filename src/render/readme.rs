@@ -1,20 +1,16 @@
 //! Assembles the README from the generated images.
 
-use crate::config::{Config, ResolvedProject};
 use crate::github::Cache;
 use crate::svg::esc;
 
 use super::Image;
 
 pub struct Inputs<'a> {
-    pub cfg: &'a Config,
     pub cache: &'a Cache,
-    pub projects: &'a [ResolvedProject],
     pub images: &'a super::Images,
 }
 
 pub fn render(input: &Inputs<'_>) -> String {
-    let cfg = input.cfg;
     let mut out = String::new();
 
     out.push_str(&format!(
@@ -22,10 +18,13 @@ pub fn render(input: &Inputs<'_>) -> String {
         input.cache.generated_at.as_deref().unwrap_or("never")
     ));
 
+    // Identity, then the pulse, then the story.
     out.push_str(&block(&input.images.hero));
-    out.push_str("\n");
+    out.push('\n');
+    out.push_str(&block(&input.images.ticker));
+    out.push('\n');
     out.push_str(&block(&input.images.about));
-    out.push_str("\n");
+    out.push('\n');
 
     // Projects.
     out.push_str("<p align=\"center\">\n");
@@ -36,14 +35,6 @@ pub fn render(input: &Inputs<'_>) -> String {
         out.push_str("<br>\n");
     }
     out.push_str("</p>\n");
-    if !input.images.demos.is_empty() {
-        out.push_str("\n<p align=\"center\">\n");
-        for image in &input.images.demos {
-            out.push_str(&img(image, image.href.as_deref()));
-            out.push('\n');
-        }
-        out.push_str("</p>\n");
-    }
 
     // Signals.
     if let Some(header) = &input.images.signal_header {
@@ -67,18 +58,6 @@ pub fn render(input: &Inputs<'_>) -> String {
     }
     out.push_str("</p>\n");
 
-    out.push_str("\n");
-    out.push_str(&block(&input.images.ticker));
-    out.push_str("\n");
-
-    out.push_str(&format!(
-        "<p align=\"center\"><sub>Generated with Rust from <a href=\"https://github.com/{h}/{h}/blob/main/profile.config.json\">profile.config.json</a> · stats refreshed weekly</sub></p>\n\n",
-        h = cfg.handle
-    ));
-
-    out.push_str(&plain_text(input));
-    out.push('\n');
-    out.push_str(&how_it_is_built(cfg));
     out
 }
 
@@ -105,86 +84,4 @@ fn img(image: &Image, href: Option<&str>) -> String {
         Some(url) => format!("<a href=\"{}\">{tag}</a>", esc(url)),
         None => tag,
     }
-}
-
-fn plain_text(input: &Inputs<'_>) -> String {
-    let cfg = input.cfg;
-    let mut out = String::new();
-    out.push_str("<details>\n<summary>Plain text version</summary>\n\n");
-    out.push_str(&format!(
-        "### {} — {}\n\n{}\n\n",
-        cfg.name,
-        cfg.role.join(" ").to_lowercase(),
-        cfg.about
-    ));
-
-    out.push_str("**Featured projects**\n\n");
-    for (i, project) in input.projects.iter().enumerate() {
-        out.push_str(&format!("{}. **{}** — {}", i + 1, project.label, project.description));
-        if let Some(stars) = project.stars {
-            out.push_str(&format!(" ({stars} stars)"));
-        }
-        if project.wip {
-            out.push_str(" · in development");
-        }
-        let mut links: Vec<String> = Vec::new();
-        if let Some(repo) = &project.repo_url {
-            links.push(format!("[source]({repo})"));
-        }
-        if let Some(live) = &project.live_url {
-            links.push(format!("[live demo]({live})"));
-        }
-        if !links.is_empty() {
-            out.push_str(&format!(" — {}", links.join(" · ")));
-        }
-        out.push('\n');
-    }
-
-    let signals = cfg.signals();
-    if !signals.is_empty() {
-        out.push_str("\n**Elsewhere**\n\n");
-        for signal in &signals {
-            let link = match &signal.url {
-                Some(url) => format!("[{}]({url})", signal.label),
-                None => signal.label.clone(),
-            };
-            out.push_str(&format!(
-                "- {} — {} · {}\n",
-                link, signal.title, signal.value
-            ));
-        }
-    }
-
-    if !cfg.contacts.is_empty() {
-        out.push_str("\n**Contact**\n\n");
-        let links: Vec<String> = cfg
-            .contacts
-            .iter()
-            .map(|c| format!("[{}]({})", c.label, c.url))
-            .collect();
-        out.push_str(&links.join(" · "));
-        out.push_str("\n");
-    }
-    out.push_str("\n</details>\n");
-    out
-}
-
-fn how_it_is_built(cfg: &Config) -> String {
-    format!(
-        r#"<details>
-<summary>How this README is built</summary>
-
-Every image above is a local, generated SVG: no third-party badges, no remote images, no JavaScript.
-
-- `profile.config.json` — what to show. Add a project by adding its `owner/repo` to the `projects` array.
-- `cargo run --release` — fetch fresh GitHub metadata and rebuild the stage.
-- `cargo run --release -- generate` — rebuild offline from `assets/profile.json`.
-- `cargo test` — XML, layout and determinism checks.
-- `.github/workflows/profile.yml` — refreshes the numbers every Monday.
-
-Repo: [github.com/{h}/{h}](https://github.com/{h}/{h})
-</details>
-"#,
-        h = cfg.handle
-    )
 }

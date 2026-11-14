@@ -8,7 +8,9 @@
 
 <p align="center"><img src="assets/stage/hero.svg" width="100%" alt="Mauricio — Fullstack Developer. Java &amp; Astro · Linux &amp; SecOps. Available for new projects." /></p>
 
-<p align="center"><img src="assets/stage/about.svg" width="100%" alt="I build websites, APIs and tools with one rule: security is designed in from day one. Astro and TypeScript on the frontend, Spring Boot and PostgreSQL on the backend, Linux underneath. I also run NeTenebrae, a Spanish-language channel about hacking and Linux with 17.5K subscribers." /></p>
+<p align="center"><img src="assets/stage/ticker.svg" width="100%" alt="FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   " /></p>
+
+<p align="center"><img src="assets/stage/about.svg" width="100%" alt="01 / About Mauricio — fullstack developer. Web, APIs, Linux and security; also a Spanish-language hacking and Linux channel." /></p>
 
 <p align="center">
 <img src="assets/stage/h-targets.svg" width="100%" alt="Select target: featured projects" /><br>
@@ -19,14 +21,8 @@
 </p>
 
 <p align="center">
-<a href="https://netenebrae-sec.github.io/neCyberWiki/"><img src="assets/stage/demo-0.svg" height="32" alt="Live demo: neCyberWiki" /></a>
-<a href="https://golaya.vercel.app/"><img src="assets/stage/demo-1.svg" height="32" alt="Live demo: golaya" /></a>
-</p>
-
-<p align="center">
 <img src="assets/stage/h-signal.svg" width="100%" alt="Signal: elsewhere on the internet" /><br>
-<a href="https://www.youtube.com/@NeTenebrae"><img src="assets/stage/signal-0.svg" width="100%" alt="NeTenebrae on YouTube — 17.5K subscribers · 18 videos · Linux tutorials, OverTheWire challenges and cybersecurity outreach in Spanish." /></a><br>
-<a href="https://neteumbra.github.io"><img src="assets/stage/signal-1.svg" width="100%" alt="neteumbra.github.io — Astro · TypeScript · GitHub Pages · The full story: services, featured projects and ways to get in touch." /></a><br>
+<a href="https://www.youtube.com/@NeTenebrae"><img src="assets/stage/signal-0.svg" width="100%" alt="CONTENT — 17.5K subscribers · 18 videos · Linux tutorials, OverTheWire challenges and cybersecurity outreach in Spanish." /></a><br>
 </p>
 
 <p align="center">
@@ -37,46 +33,3 @@
 <a href="https://neteumbra.github.io"><img src="assets/stage/contact-portfolio.svg" height="44" alt="PORTFOLIO ↗" /></a>
 <a href="https://neteumbra.github.io/contacto"><img src="assets/stage/contact-contact.svg" height="44" alt="CONTACT ↗" /></a>
 </p>
-
-<p align="center"><img src="assets/stage/ticker.svg" width="100%" alt="FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   " /></p>
-
-<p align="center"><sub>Generated with Rust from <a href="https://github.com/neteumbra/neteumbra/blob/main/profile.config.json">profile.config.json</a> · stats refreshed weekly</sub></p>
-
-<details>
-<summary>Plain text version</summary>
-
-### Mauricio — fullstack developer
-
-I build websites, APIs and tools with one rule: security is designed in from day one. Astro and TypeScript on the frontend, Spring Boot and PostgreSQL on the backend, Linux underneath. I also run NeTenebrae, a Spanish-language channel about hacking and Linux with 17.5K subscribers.
-
-**Featured projects**
-
-1. **neCyberWiki** — Personal cybersecurity knowledge base: pentesting notes, CTF write-ups and cheatsheets, published as a browsable static site. (9 stars) — [source](https://github.com/NeTenebrae-Sec/neCyberWiki) · [live demo](https://netenebrae-sec.github.io/neCyberWiki/)
-2. **neBSPWM** — My bspwm desktop environment: a tuned Linux workstation with a custom QML status bar and helper scripts. (10 stars) · in development — [source](https://github.com/NeTenebrae-Sec/neBSPWM)
-3. **golaya** — Fullstack court-booking platform: real-time availability, admin panel and per-user booking history. (0 stars) — [source](https://github.com/HertexCode/golaya) · [live demo](https://golaya.vercel.app/)
-4. **nenvim** — My Neovim configuration: LSP, treesitter and the plugins I actually use, kept small on purpose. (0 stars) — [source](https://github.com/NeTenebrae-Sec/nenvim)
-
-**Elsewhere**
-
-- [CONTENT](https://www.youtube.com/@NeTenebrae) — NeTenebrae on YouTube · 17.5K subscribers · 18 videos
-- [SITE](https://neteumbra.github.io) — neteumbra.github.io · Astro · TypeScript · GitHub Pages
-
-**Contact**
-
-[GITHUB](https://github.com/neteumbra) · [LINKEDIN](https://www.linkedin.com/in/me-dev-fullstack/) · [YOUTUBE](https://www.youtube.com/@NeTenebrae) · [PORTFOLIO](https://neteumbra.github.io) · [CONTACT](https://neteumbra.github.io/contacto)
-
-</details>
-
-<details>
-<summary>How this README is built</summary>
-
-Every image above is a local, generated SVG: no third-party badges, no remote images, no JavaScript.
-
-- `profile.config.json` — what to show. Add a project by adding its `owner/repo` to the `projects` array.
-- `cargo run --release` — fetch fresh GitHub metadata and rebuild the stage.
-- `cargo run --release -- generate` — rebuild offline from `assets/profile.json`.
-- `cargo test` — XML, layout and determinism checks.
-- `.github/workflows/profile.yml` — refreshes the numbers every Monday.
-
-Repo: [github.com/neteumbra/neteumbra](https://github.com/neteumbra/neteumbra)
-</details>

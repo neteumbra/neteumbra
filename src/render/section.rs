@@ -8,7 +8,7 @@ const H: f64 = 72.0;
 pub fn render(title: &str, meta: &str) -> String {
     let mut body = String::new();
     body.push_str(&format!(
-        r#"<text x="852" y="56" font-size="52" font-weight="800" fill="{INK}" fill-opacity=".05" letter-spacing="2" text-anchor="end">{}</text>"#,
+        r#"<rect width="{W}" height="{H}" fill="{BG}"/><text x="852" y="56" font-size="52" font-weight="800" fill="{INK}" fill-opacity=".05" letter-spacing="2" text-anchor="end">{}</text>"#,
         esc(&title.to_uppercase())
     ));
     body.push_str(&format!(

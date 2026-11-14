@@ -130,18 +130,39 @@ fn readme_references_only_generated_files() {
 }
 
 #[test]
-fn readme_has_accessible_and_plain_text_fallbacks() {
+fn readme_is_images_only_and_alt_text_is_clean() {
     let output = build(&config(), &cache());
-    let readme = output
-        .files
-        .iter()
-        .find(|f| f.path == "README.md")
-        .unwrap();
+    let readme = output.files.iter().find(|f| f.path == "README.md").unwrap();
 
-    assert!(readme.content.contains("alt=\"Mauricio — Fullstack Developer."));
-    assert!(readme.content.contains("<summary>Plain text version</summary>"));
-    assert!(readme.content.contains("cargo test"));
-    assert!(readme.content.contains("profile.config.json"));
+    let hero_alt = "alt=\"Mauricio — Fullstack Developer.";
+    assert!(readme.content.contains(hero_alt));
+    for banned in [
+        "Plain text version",
+        "How this README is built",
+        "Generated with Rust",
+        "<details>",
+        "Live demo:",
+        "demo-",
+    ] {
+        assert!(
+            !readme.content.contains(banned),
+            "README still contains {banned}"
+        );
+    }
+
+    // Alt text is the only README text left; it must not leak the channel name.
+    for alt in readme
+        .content
+        .split("alt=\"")
+        .skip(1)
+        .filter_map(|chunk| chunk.split('"').next())
+    {
+        assert!(
+            !alt.contains("NeTenebrae"),
+            "alt text leaks the channel name: {alt}"
+        );
+    }
+
     assert!(!readme.content.contains("img.shields.io"));
 }
 
