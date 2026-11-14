@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 44" width="900" height="44" role="img" aria-label="FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   "><title>FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   </title><style>
+text{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono',monospace;}
+.blink{animation:blink 1.15s steps(1) infinite}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.pulse{animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.rise{animation:rise .55s cubic-bezier(.22,1,.36,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.slam{animation:slam .5s cubic-bezier(.22,1,.36,1) both}
+@keyframes slam{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
+.mq{animation:mq var(--mq-dur) linear infinite}
+@keyframes mq{to{transform:translateX(var(--mq-shift))}}
+.scan{animation:scan 7s linear infinite}
+@keyframes scan{from{transform:translateY(-150px)}to{transform:translateY(520px)}}
+.gA{animation:gA 9s steps(1,end) infinite}
+.gB{animation:gB 9s steps(1,end) infinite;animation-delay:4.6s}
+@keyframes gA{0%,88%,100%{opacity:0;transform:translate(0,0)}89%{opacity:.55;transform:translate(-3px,1px)}92%{opacity:.3;transform:translate(3px,-1px)}95%{opacity:.45;transform:translate(-2px,0)}}
+@keyframes gB{0%,90%,100%{opacity:0;transform:translate(0,0)}91%{opacity:.4;transform:translate(3px,1px)}94%{opacity:.25;transform:translate(-3px,-1px)}97%{opacity:.4;transform:translate(2px,0)}}
+@keyframes type1{from{width:0}to{width:var(--w1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style><defs></defs><rect width="900" height="44" fill="#0a1113"/><rect x="0" y="0" width="900" height="1" fill="#7df29a" fill-opacity=".55"/><rect x="0" y="43" width="900" height="1" fill="#7df29a" fill-opacity=".55"/><clipPath id="mq"><rect x="16" y="0" width="868" height="44"/></clipPath><g clip-path="url(#mq)"><g class="mq" style="--mq-shift:-2179.3px;--mq-dur:51.9s"><text x="18.0" y="27" font-size="11" fill="#7df29a" fill-opacity=".85" letter-spacing="1.2" textLength="2179.3" lengthAdjust="spacing">FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   </text><text x="2197.3" y="27" font-size="11" fill="#7df29a" fill-opacity=".85" letter-spacing="1.2" textLength="2179.3" lengthAdjust="spacing">FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   </text><text x="4376.5" y="27" font-size="11" fill="#7df29a" fill-opacity=".85" letter-spacing="1.2" textLength="2179.3" lengthAdjust="spacing">FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   </text></g></g></svg>

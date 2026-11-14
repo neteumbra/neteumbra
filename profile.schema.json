@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "neteumbra profile config",
+  "description": "Source of truth for the generated profile README and SVG stage.",
+  "type": "object",
+  "required": ["handle", "brand", "name", "role", "tagline", "about", "projects", "contacts"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "handle": { "type": "string", "description": "GitHub username, without the @." },
+    "brand": { "type": "string", "description": "Short name used in the terminal window title." },
+    "name": { "type": "string", "description": "Display name used in alt text and the README fallback." },
+    "role": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": { "type": "string" },
+      "description": "Two display lines for the hero title."
+    },
+    "tagline": { "type": "string" },
+    "kicker": { "type": "string" },
+    "location": { "type": "string" },
+    "status": { "type": "string" },
+    "about": { "type": "string" },
+    "stack": { "type": "array", "items": { "type": "string" } },
+    "orgs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Public organizations whose repos count towards stars and repo totals."
+    },
+    "commit_window_days": { "type": "integer", "minimum": 30, "maximum": 1095 },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "owner/name. Metadata is fetched from GitHub." },
+          "label": { "type": "string", "description": "Overrides the repo name. Required when repo is omitted." },
+          "description": { "type": "string" },
+          "tag": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "live": { "type": "string", "description": "Live demo URL. Overrides the repo homepage." },
+          "url": { "type": "string", "description": "Link for entries without a repo." },
+          "wip": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "title", "value"],
+        "properties": {
+          "label": { "type": "string" },
+          "title": { "type": "string" },
+          "value": { "type": "string" },
+          "description": { "type": "string" },
+          "url": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "contacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "url"],
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string" },
+          "filled": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-11-14T02:18:30Z",
+  "stats": {
+    "commits": 385,
+    "stars": 20,
+    "public_repos": 15,
+    "followers": 14
+  },
+  "repos": {
+    "HertexCode/golaya": {
+      "full_name": "HertexCode/golaya",
+      "description": "backend para proyecto principal generation",
+      "language": "JavaScript",
+      "stars": 0,
+      "homepage": null,
+      "url": "https://github.com/HertexCode/golaya",
+      "updated_at": "2026-11-05T09:35:14Z"
+    },
+    "NeTenebrae-Sec/neBSPWM": {
+      "full_name": "NeTenebrae-Sec/neBSPWM",
+      "description": "Mi entorno de trabajo en bspwm | EN DESARROLLO",
+      "language": "QML",
+      "stars": 10,
+      "homepage": null,
+      "url": "https://github.com/NeTenebrae-Sec/neBSPWM",
+      "updated_at": "2026-10-21T21:37:47Z"
+    },
+    "NeTenebrae-Sec/neCyberWiki": {
+      "full_name": "NeTenebrae-Sec/neCyberWiki",
+      "description": "Este repositorio contiene notas organizadas sobre ciberseguridad y ciencias de la computación. Todo basado en lo que voy aprendiendo y aplicando en la práctica.",
+      "language": null,
+      "stars": 9,
+      "homepage": "https://netenebrae-sec.github.io/neCyberWiki/",
+      "url": "https://github.com/NeTenebrae-Sec/neCyberWiki",
+      "updated_at": "2026-10-21T21:25:55Z"
+    },
+    "NeTenebrae-Sec/nenvim": {
+      "full_name": "NeTenebrae-Sec/nenvim",
+      "description": "My personal nvim config.",
+      "language": "Lua",
+      "stars": 0,
+      "homepage": null,
+      "url": "https://github.com/NeTenebrae-Sec/nenvim",
+      "updated_at": "2026-10-21T20:12:48Z"
+    }
+  }
+}

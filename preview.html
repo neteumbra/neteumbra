@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>neteumbra · stage preview</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --page: #05090a;
+    --panel: #0a1113;
+    --ink: #f2f6f1;
+    --muted: #7e8f86;
+    --line: rgba(242,246,241,.12);
+    --accent: #7df29a;
+  }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --page: #f4f6f4;
+    --panel: #ffffff;
+    --ink: #101614;
+    --muted: #5c6b63;
+    --line: rgba(6,16,10,.14);
+    --accent: #127a3a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px clamp(16px, 5vw, 64px) 80px;
+    background: var(--page);
+    color: var(--ink);
+    font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  header {
+    position: sticky; top: 0; z-index: 2;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 14px 0; margin-bottom: 8px;
+    background: linear-gradient(var(--page) 80%, transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  header h1 { margin: 0; font-size: 15px; letter-spacing: 2px; }
+  header span { color: var(--muted); }
+  button {
+    margin-left: auto; cursor: pointer;
+    background: transparent; color: var(--accent);
+    border: 1px solid var(--accent); border-radius: 6px;
+    padding: 6px 12px; font: inherit; letter-spacing: 1px;
+  }
+  main { max-width: 1000px; margin: 0 auto; }
+  section { margin: 34px 0 0; }
+  h2 {
+    margin: 0 0 8px; font-size: 10px; font-weight: 600;
+    letter-spacing: 1.6px; color: var(--muted); text-transform: uppercase;
+  }
+  .stage {
+    display: flex; justify-content: center;
+    padding: 10px; border: 1px dashed var(--line); border-radius: 10px;
+  }
+  .stage img { max-width: 100%; height: auto; }
+  .note { color: var(--muted); margin: 0 0 24px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>NETEUMBRA · STAGE</h1>
+  <span>generated preview</span>
+  <button type="button" id="theme">LIGHT / DARK</button>
+</header>
+<main>
+  <p class="note">Both GitHub themes are simulated here. The SVGs are self-contained: no webfonts, no scripts, no remote assets.</p>
+<section>
+  <h2>assets/stage/hero.svg</h2>
+  <div class="stage"><img src="assets/stage/hero.svg" alt="Mauricio — Fullstack Developer. Java &amp; Astro · Linux &amp; SecOps. Available for new projects." /></div>
+</section>
+<section>
+  <h2>assets/stage/about.svg</h2>
+  <div class="stage"><img src="assets/stage/about.svg" alt="I build websites, APIs and tools with one rule: security is designed in from day one. Astro and TypeScript on the frontend, Spring Boot and PostgreSQL on the backend, Linux underneath. I also run NeTenebrae, a Spanish-language channel about hacking and Linux with 17.5K subscribers." /></div>
+</section>
+<section>
+  <h2>assets/stage/h-targets.svg</h2>
+  <div class="stage"><img src="assets/stage/h-targets.svg" alt="Select target: featured projects" /></div>
+</section>
+<section>
+  <h2>assets/stage/target-0.svg</h2>
+  <div class="stage"><img src="assets/stage/target-0.svg" alt="01 — neCyberWiki: Personal cybersecurity knowledge base: pentesting notes, CTF write-ups and cheatsheets, published as a browsable static site. (9 stars)" /></div>
+</section>
+<section>
+  <h2>assets/stage/target-1.svg</h2>
+  <div class="stage"><img src="assets/stage/target-1.svg" alt="02 — neBSPWM: My bspwm desktop environment: a tuned Linux workstation with a custom QML status bar and helper scripts. (10 stars) — in development" /></div>
+</section>
+<section>
+  <h2>assets/stage/target-2.svg</h2>
+  <div class="stage"><img src="assets/stage/target-2.svg" alt="03 — golaya: Fullstack court-booking platform: real-time availability, admin panel and per-user booking history. (0 stars)" /></div>
+</section>
+<section>
+  <h2>assets/stage/target-3.svg</h2>
+  <div class="stage"><img src="assets/stage/target-3.svg" alt="04 — nenvim: My Neovim configuration: LSP, treesitter and the plugins I actually use, kept small on purpose. (0 stars)" /></div>
+</section>
+<section>
+  <h2>assets/stage/demo-0.svg</h2>
+  <div class="stage"><img src="assets/stage/demo-0.svg" alt="Live demo: neCyberWiki" /></div>
+</section>
+<section>
+  <h2>assets/stage/demo-1.svg</h2>
+  <div class="stage"><img src="assets/stage/demo-1.svg" alt="Live demo: golaya" /></div>
+</section>
+<section>
+  <h2>assets/stage/h-signal.svg</h2>
+  <div class="stage"><img src="assets/stage/h-signal.svg" alt="Signal: elsewhere on the internet" /></div>
+</section>
+<section>
+  <h2>assets/stage/signal-0.svg</h2>
+  <div class="stage"><img src="assets/stage/signal-0.svg" alt="NeTenebrae on YouTube — 17.5K subscribers · 18 videos · Linux tutorials, OverTheWire challenges and cybersecurity outreach in Spanish." /></div>
+</section>
+<section>
+  <h2>assets/stage/signal-1.svg</h2>
+  <div class="stage"><img src="assets/stage/signal-1.svg" alt="neteumbra.github.io — Astro · TypeScript · GitHub Pages · The full story: services, featured projects and ways to get in touch." /></div>
+</section>
+<section>
+  <h2>assets/stage/h-contact.svg</h2>
+  <div class="stage"><img src="assets/stage/h-contact.svg" alt="Contact" /></div>
+</section>
+<section>
+  <h2>assets/stage/contact-github.svg</h2>
+  <div class="stage"><img src="assets/stage/contact-github.svg" alt="GITHUB ↗" /></div>
+</section>
+<section>
+  <h2>assets/stage/contact-linkedin.svg</h2>
+  <div class="stage"><img src="assets/stage/contact-linkedin.svg" alt="LINKEDIN ↗" /></div>
+</section>
+<section>
+  <h2>assets/stage/contact-youtube.svg</h2>
+  <div class="stage"><img src="assets/stage/contact-youtube.svg" alt="YOUTUBE ↗" /></div>
+</section>
+<section>
+  <h2>assets/stage/contact-portfolio.svg</h2>
+  <div class="stage"><img src="assets/stage/contact-portfolio.svg" alt="PORTFOLIO ↗" /></div>
+</section>
+<section>
+  <h2>assets/stage/contact-contact.svg</h2>
+  <div class="stage"><img src="assets/stage/contact-contact.svg" alt="CONTACT ↗" /></div>
+</section>
+<section>
+  <h2>assets/stage/ticker.svg</h2>
+  <div class="stage"><img src="assets/stage/ticker.svg" alt="FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   " /></div>
+</section>
+</main>
+<script>
+  const root = document.documentElement;
+  document.getElementById('theme').addEventListener('click', () => {
+    root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
+  });
+</script>
+</body>
+</html>
