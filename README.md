@@ -3,7 +3,7 @@
   Edit profile.config.json and regenerate:
       cargo run --release              # refresh GitHub data + rebuild
       cargo run --release -- generate  # rebuild from assets/profile.json
-  Last data sync: 2026-11-14T03:02:30Z
+  Last data sync: 2026-11-14T03:30:08Z
 -->
 
 <p align="center"><img src="assets/stage/hero.svg" width="100%" alt="Mauricio — Fullstack Developer. Java &amp; Astro · Linux &amp; SecOps. Available for new projects." /></p>
