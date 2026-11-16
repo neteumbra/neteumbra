@@ -3,12 +3,12 @@
   Edit profile.config.json and regenerate:
       cargo run --release              # refresh GitHub data + rebuild
       cargo run --release -- generate  # rebuild from assets/profile.json
-  Last data sync: 2026-11-14T03:30:08Z
+  Last data sync: 2026-11-16T12:24:57Z
 -->
 
 <p align="center"><img src="assets/stage/hero.svg" width="100%" alt="Mauricio — Fullstack Developer. Java &amp; Astro · Linux &amp; SecOps. Available for new projects." /></p>
 
-<p align="center"><img src="assets/stage/ticker.svg" width="100%" alt="FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-14   ·   THANKS FOR STOPPING BY   ★   " /></p>
+<p align="center"><img src="assets/stage/ticker.svg" width="100%" alt="FULLSTACK DEVELOPER   ·   SECURITY BY DEFAULT   ·   JAVA   ·   SPRING BOOT   ·   TYPESCRIPT   ·   ASTRO   ·   LINUX   ·   DOCKER   ·   SECOPS   ·   385 COMMITS · 12M   ·   20 STARS   ·   15 PUBLIC REPOS   ·   14 FOLLOWERS   ·   SYNC 2026-11-16   ·   THANKS FOR STOPPING BY   ★   " /></p>
 
 <p align="center"><img src="assets/stage/about.svg" width="100%" alt="01 / About Mauricio — fullstack developer. Web, APIs, Linux and security; also a Spanish-language hacking and Linux channel." /></p>
 
